@@ -6550,7 +6550,7 @@ TP:Button("藤蔓島(Vine Island)", function()
         bypass_teleport(teleport_table.location1)
 end)
 
-TP:Button("小海島1(Sea Island I)", function()
+TP:Button("小海島I(Sea Island I)", function()
     local Sound = Instance.new("Sound",game:GetService("SoundService"))
         Sound.SoundId = "rbxassetid://9125530803"
         Sound:Play()
@@ -6576,7 +6576,7 @@ TP:Button("小海島1(Sea Island I)", function()
         bypass_teleport(teleport_table.location1)
 end)
 
-TP:Button("小海島2(Sea Island II)", function()
+TP:Button("小海島II(Sea Island II)", function()
     local Sound = Instance.new("Sound",game:GetService("SoundService"))
         Sound.SoundId = "rbxassetid://9125530803"
         Sound:Play()
@@ -6602,7 +6602,59 @@ TP:Button("小海島2(Sea Island II)", function()
         bypass_teleport(teleport_table.location1)
 end)
 
-TP:Button("小海島3(Sea Island III)", function()
+TP:Button("小海島III(Sea Island III)", function()
+    local Sound = Instance.new("Sound",game:GetService("SoundService"))
+        Sound.SoundId = "rbxassetid://9125530803"
+        Sound:Play()
+        local teleport_table = {
+            location1 = Vector3.new(-1679.1455078125, 131.32720947265625, 2566.18359375)
+        
+        }
+        
+        local tween_s = game:GetService('TweenService')
+        local tweeninfo = TweenInfo.new(1,Enum.EasingStyle.Linear)
+        
+        local lp = game.Players.LocalPlayer
+        
+        function bypass_teleport(v)
+            if lp.Character and 
+            lp.Character:FindFirstChild('HumanoidRootPart') then
+                local cf = CFrame.new(v)
+                local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+                a:Play()
+            end
+        end
+        
+        bypass_teleport(teleport_table.location1)
+end)
+
+TP:Button("萬聖島I(Halloween Island I)", function()
+    local Sound = Instance.new("Sound",game:GetService("SoundService"))
+        Sound.SoundId = "rbxassetid://9125530803"
+        Sound:Play()
+        local teleport_table = {
+            location1 = Vector3.new(-7364.72119140625, 90.6257553100586, 3770.40380859375)
+        
+        }
+        
+        local tween_s = game:GetService('TweenService')
+        local tweeninfo = TweenInfo.new(1,Enum.EasingStyle.Linear)
+        
+        local lp = game.Players.LocalPlayer
+        
+        function bypass_teleport(v)
+            if lp.Character and 
+            lp.Character:FindFirstChild('HumanoidRootPart') then
+                local cf = CFrame.new(v)
+                local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+                a:Play()
+            end
+        end
+        
+        bypass_teleport(teleport_table.location1)
+end)
+
+TP:Button("萬聖島II(Halloween Island II)", function()
     local Sound = Instance.new("Sound",game:GetService("SoundService"))
         Sound.SoundId = "rbxassetid://9125530803"
         Sound:Play()
@@ -7774,16 +7826,7 @@ LOL:Button("複製道具(Copy item)", function()
     end)
 
 
-
-
-
-
-
-
-Act = Library:Tab("動畫包")
-Act:Seperator("動畫包")
-
-Act:Button("角色動畫(Character Action)", function()
+LOL:Button("角色動畫(Character Action)", function()
     local Sound = Instance.new("Sound",game:GetService("SoundService"))
     Sound.SoundId = "rbxassetid://9125530803"
     Sound:Play()
@@ -8504,15 +8547,7 @@ end)
 
 
 
-
-
-
-
-
-    RTX = Library:Tab("光影")
-    RTX:Seperator("光影")
-    
-    RTX:Button("光影(RTX)", function()
+    LOL:Button("光影(RTX)", function()
         local Sound = Instance.new("Sound",game:GetService("SoundService"))
         Sound.SoundId = "rbxassetid://9125530803"
         Sound:Play()
